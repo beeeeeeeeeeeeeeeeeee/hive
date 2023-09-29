@@ -8,4 +8,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hive.Email\Hive.Email.csproj" />
+    <ProjectReference Include="..\Hive.Webhooks\Hive.Webhooks.csproj" />
+  </ItemGroup>
 </Project>

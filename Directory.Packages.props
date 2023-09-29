@@ -4,5 +4,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.0-rc.1.23419.4" />
+    <PackageVersion Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
+    <PackageVersion Include="MimeKit" Version="4.2.0" />
+    <PackageVersion Include="SmtpServer" Version="9.0.3" />
   </ItemGroup>
 </Project>
