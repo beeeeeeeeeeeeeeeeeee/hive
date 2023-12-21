@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hive.Email", "src\Hive.Emai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hive.Webhooks", "src\Hive.Webhooks\Hive.Webhooks.csproj", "{B4C397AD-8D96-436E-9811-C10E181E7D4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hive.Dashboard", "src\Hive.Dashboard\Hive.Dashboard.csproj", "{AF71E31F-3352-4E43-8D46-85982580CE25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{B4C397AD-8D96-436E-9811-C10E181E7D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4C397AD-8D96-436E-9811-C10E181E7D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4C397AD-8D96-436E-9811-C10E181E7D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF71E31F-3352-4E43-8D46-85982580CE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF71E31F-3352-4E43-8D46-85982580CE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF71E31F-3352-4E43-8D46-85982580CE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF71E31F-3352-4E43-8D46-85982580CE25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{09941076-A030-4AB4-B321-D40D86BBE5F2} = {11E4DBEC-B806-41A9-A9FE-611D22DC14B3}
 		{177733E3-9151-4EC6-9462-40B7FB534876} = {11E4DBEC-B806-41A9-A9FE-611D22DC14B3}
 		{B4C397AD-8D96-436E-9811-C10E181E7D4D} = {11E4DBEC-B806-41A9-A9FE-611D22DC14B3}
+		{AF71E31F-3352-4E43-8D46-85982580CE25} = {11E4DBEC-B806-41A9-A9FE-611D22DC14B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E4A39E9-960B-4E1B-BD07-34F20F65E5C7}

@@ -1,0 +1,51 @@
+﻿@page "/http"
+
+<MudGrid>
+    <MudItem xs="4">
+        <MudTable Items="Elements"
+                  T="Ele"
+                  Bordered="true"
+                  Outlined="true"
+                  Hover="true"
+                  Elevation="1"
+                  Dense="true"
+                  Striped="true">
+            <ToolBarContent>
+                <MudTextField @bind-Value="searchString" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+            </ToolBarContent>
+            <HeaderContent>
+                <MudTh>Id</MudTh>
+                <MudTh>A</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Id">@context.Ok</MudTd>
+                <MudTd DataLabel="A">@context.A</MudTd>
+            </RowTemplate>
+        </MudTable>
+    </MudItem>
+    <MudItem xs="8">
+        <MudCard Outlined="true">
+            <MudCardContent>
+                <MudText>Story of the day</MudText>
+                <MudText Typo="Typo.body2">The quick, brown fox jumps over a lazy dog.</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+
+@code {
+    private string searchString = "";
+    private readonly List<Ele> Elements = new List<Ele>
+    {
+        new(1, "A SUPER LONG STRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRING"),
+        new(2, "A SUPER LONG STRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRING"),
+        new(3, "A SUPER LONG STRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRING"),
+        new(4, "A SUPER LONG STRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRINGSTRING"),
+    };
+
+    private record Ele(int Ok, string A);
+}

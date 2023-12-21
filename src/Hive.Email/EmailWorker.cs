@@ -3,25 +3,22 @@ using Microsoft.Extensions.Logging;
 
 namespace Hive.Email;
 
-internal class EmailWorker : BackgroundService
+internal class EmailWorker
+(
+    SmtpServer.SmtpServer smtpServer,
+    ILogger<EmailWorker> logger
+) : BackgroundService
 {
-    private readonly SmtpServer.SmtpServer _smtpServer;
-    private readonly ILogger<EmailWorker> _logger;
-
-    public EmailWorker(SmtpServer.SmtpServer smtpServer, ILogger<EmailWorker> logger)
-    {
-        _smtpServer = smtpServer;
-        _logger = logger;
-    }
-
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        return  _smtpServer.StartAsync(stoppingToken);
+        logger.LogInformation("SMTP Server is starting...");
+        return smtpServer.StartAsync(stoppingToken);
     }
 
     public override Task StopAsync(CancellationToken cancellationToken)
     {
-        _smtpServer.Shutdown();
-        return _smtpServer.ShutdownTask;
+        logger.LogInformation("SMTP Server is stopping...");
+        smtpServer.Shutdown();
+        return smtpServer.ShutdownTask;
     }
 }

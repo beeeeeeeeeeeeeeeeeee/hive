@@ -3,9 +3,11 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.0-rc.1.23419.4" />
-    <PackageVersion Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
-    <PackageVersion Include="MimeKit" Version="4.2.0" />
-    <PackageVersion Include="SmtpServer" Version="9.0.3" />
+    <PackageVersion Include="Blazored.LocalStorage" Version="4.4.0" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.IO.RecyclableMemoryStream" Version="3.0.0" />
+    <PackageVersion Include="MimeKit" Version="4.3.0" />
+    <PackageVersion Include="MudBlazor" Version="6.11.2" />
+    <PackageVersion Include="SmtpServer" Version="10.0.0" />
   </ItemGroup>
 </Project>

@@ -7,6 +7,8 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddWebhooks(this IServiceCollection services)
     {
+        services.AddSingleton<HttpRequestQueue>();
+
         services.AddSingleton(sp =>
         {
             var listener = new HttpListener();
@@ -15,8 +17,8 @@ public static class ServiceCollectionExtensions
             return listener;
         });
 
-
         services.AddHostedService<WebhooksWorker>();
+        services.AddHostedService<RequestQueueWorker>();
         return services;
     }
 }

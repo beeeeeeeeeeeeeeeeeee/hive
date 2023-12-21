@@ -17,17 +17,20 @@ public static class ServiceCollectionExtensions
             const int maxBufferSize = 16 * largeBufferMultiple;
 
             // TODO: user defined Options?
-
-            var manager = new RecyclableMemoryStreamManager(blockSize, largeBufferMultiple, maxBufferSize);
-
+            var recyclableMemoryStreamManagerOptions = new RecyclableMemoryStreamManager.Options
+            {
+                BlockSize = blockSize,
+                LargeBufferMultiple = largeBufferMultiple,
+                MaximumBufferSize = maxBufferSize,
 #if DEBUG
-            manager.GenerateCallStacks = true;
+                GenerateCallStacks = true,
 #endif
-            manager.AggressiveBufferReturn = true;
-            manager.MaximumFreeLargePoolBytes = maxBufferSize * 4;
-            manager.MaximumFreeSmallPoolBytes = 100 * blockSize;
+                AggressiveBufferReturn = true,
+                MaximumLargePoolFreeBytes = maxBufferSize * 4,
+                MaximumSmallPoolFreeBytes = 100 * blockSize,
+            };
 
-            return manager;
+            return new RecyclableMemoryStreamManager(recyclableMemoryStreamManagerOptions);
         });
 
         services.AddTransient<IMessageStore, InMemoryMessageStore>();

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <UserSecretsId>dotnet-Hive.CLI-dc6f4c5d-dfe3-40b0-b92e-5c749893d8e3</UserSecretsId>
-    <PublishAot>true</PublishAot>
+    <!--<PublishAot>true</PublishAot>-->
   </PropertyGroup>
 
   <ItemGroup>
